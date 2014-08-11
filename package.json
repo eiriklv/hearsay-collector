@@ -1,0 +1,30 @@
+{
+  "name": "hearsay-collector",
+  "description": "Hearsay Content Aggregator",
+  "author": "Eirik Vullum <eirik@evconsult.no>",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "mongoose": "3.8.x",
+    "request": "2.34.x",
+    "async": "0.2.x",
+    "colors": "0.6.x",
+    "redis": "0.10.x",
+    "url": "0.7.x",
+    "convict": "0.4.2",
+    "debug": "0.8.x",
+    "congregator-sitescraper": "*",
+    "congregator-rssreader": "*",
+    "hearsay-common": "git+ssh://git@bitbucket.org:eiriklv/hearsay-common.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eirik Vullum <evullum@gmail.com> (http://www.evconsult.no/)"
+}
