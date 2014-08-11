@@ -12,11 +12,9 @@
   },
   "dependencies": {
     "mongoose": "3.8.x",
-    "request": "2.34.x",
-    "async": "0.2.x",
+    "request": "2.40.x",
+    "async": "0.9.x",
     "colors": "0.6.x",
-    "redis": "0.10.x",
-    "url": "0.7.x",
     "convict": "0.4.2",
     "debug": "0.8.x",
     "congregator-sitescraper": "*",

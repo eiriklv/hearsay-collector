@@ -7,7 +7,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['technology', 'games'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             elements: [
                 {
@@ -63,7 +63,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['technology', 'games'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             elements: [
                 {
@@ -115,7 +115,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['technology', 'games'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             elements: [
                 {
@@ -170,14 +170,14 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'feed',
         name: 'hackernews',
         url: 'https://news.ycombinator.com/rss',
         linkref: 'url',
         tags: ['technology', 'games'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             elements: [
                 {

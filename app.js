@@ -6,7 +6,6 @@ var setup = require('./setup');
 // dependencies
 var mongoose = require('mongoose');
 var debug = require('debug')('hearsay:collector:app');
-var redis = require('redis');
 var SiteScraper = require('congregator-sitescraper');
 var RssReader = require('congregator-rssreader');
 

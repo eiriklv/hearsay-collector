@@ -7,7 +7,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['gaming', 'technology'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             containers: [
                 {
@@ -79,7 +79,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['gaming', 'technology'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             containers: [
                 {
@@ -138,7 +138,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['gaming', 'technology'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             containers: [
                 {
@@ -291,7 +291,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['gaming', 'technology'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             containers: [
                 {
@@ -359,7 +359,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['nyheter', 'innenriks'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             containers: [
                 {
@@ -473,7 +473,7 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['nyheter', 'innenriks'],
         format: 'desktop',
-        body: true,
+        body: false,
         template: {
             containers: [
                 {
@@ -568,7 +568,7 @@ exports = module.exports = [
                             items: [
                                 {
                                     selector: 'span.df-img-container-inner a img',
-                                    attribute: 'data-original'
+                                    attribute: 'data-echo'
                                 }
                             ]
                         }
