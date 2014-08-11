@@ -26,13 +26,8 @@ var config = module.exports = convict({
     },
     mongo_url: {
         doc: 'MongoDB url to connect to (including db reference)',
-        default: 'mongodb://localhost/content-aggregator',
+        default: 'mongodb://localhost/hearsay',
         env: 'MONGO_URL'
-    },
-    redis_url: {
-        doc: 'Redis url to connect to (including auth string)',
-        default: 'redis://localhost:6379',
-        env: 'REDIS_URL'
     }
 });
 

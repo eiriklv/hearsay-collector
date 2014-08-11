@@ -21,7 +21,8 @@
     "debug": "0.8.x",
     "congregator-sitescraper": "*",
     "congregator-rssreader": "*",
-    "hearsay-common": "git+ssh://git@bitbucket.org:eiriklv/hearsay-common.git"
+    "hearsay-common": "git+ssh://git@github.com:eiriklv/hearsay-common.git
+    "
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
