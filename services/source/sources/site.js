@@ -173,7 +173,7 @@ exports = module.exports = [
                                 }
                             ]
                         },
-                        {   
+                        {
                             name: 'image',
                             type: 'url',
                             fallback: 'http://www.pressfire.no/gfx/pressfire-logo.png',
