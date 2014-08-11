@@ -564,11 +564,19 @@ exports = module.exports = [
                         {
                             name: 'image',
                             type: 'url',
-                            fallback: 'http://someimageurl.com/1.png',
+                            fallback: 'http://www.sol.no/static/img/sol_logo.png',
                             items: [
                                 {
                                     selector: 'span.df-img-container-inner a img',
                                     attribute: 'data-echo'
+                                },
+                                {
+                                    selector: 'span.df-img-container-inner a img',
+                                    attribute: 'data-src'
+                                },
+                                {
+                                    selector: 'span.df-img-container-inner a img',
+                                    attribute: 'src'
                                 }
                             ]
                         }
