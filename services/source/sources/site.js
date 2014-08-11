@@ -1,6 +1,6 @@
 exports = module.exports = [
     {
-        active: false,
+        active: true,
         origin: 'site',
         name: 'Gamer.no',
         url: 'http://www.gamer.no',
@@ -54,7 +54,7 @@ exports = module.exports = [
                         {
                             name: 'image',
                             type: 'url',
-                            fallback: 'http://someimageurl.com/1.png',
+                            fallback: 'http://img.gfx.no/1428/1428622/gamer_logo_169.300x169mc.jpg',
                             items: [
                                 {
                                     selector: 'figure a img',
