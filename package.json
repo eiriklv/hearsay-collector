@@ -17,8 +17,8 @@
     "colors": "0.6.x",
     "convict": "0.4.2",
     "debug": "0.8.x",
-    "congregator-sitescraper": "*",
-    "congregator-rssreader": "*",
+    "congregator-sitescraper": "git+https://878c3337f2ae0290ec65e461c1b6f7cc8e26c0c6:x-oauth-basic@github.com/eiriklv/congregator-sitescraper.git",
+    "congregator-rssreader": "git+https://878c3337f2ae0290ec65e461c1b6f7cc8e26c0c6:x-oauth-basic@github.com/eiriklv/congregator-rssreader.git",
     "hearsay-common": "git+ssh://git@github.com:eiriklv/hearsay-common.git"
   },
   "scripts": {
