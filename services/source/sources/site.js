@@ -2,10 +2,78 @@ exports = module.exports = [
     {
         active: true,
         origin: 'site',
+        name: 'Wired Science',
+        url: 'http://www.wired.com/science',
+        linkref: 'url',
+        category: ['technology', 'science'],
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: 'article',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'url',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h2 a'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'description',
+                            items: [
+                                {
+                                    selector: 'div.excertp p',
+                                    delimiter: '\n'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://www.wired.com/wp-content/themes/wired/assets/images/post_wired_logo_150x60.gif',
+                            items: [
+                                {
+                                    selector: 'div.thumbnail a img',
+                                    attribute: 'src'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        active: true,
+        origin: 'site',
         name: 'Gamer.no',
         url: 'http://www.gamer.no',
         linkref: 'url',
-        tags: ['gaming', 'technology'],
+        category: ['technology', 'gaming'],
         format: 'desktop',
         body: false,
         template: {
@@ -72,25 +140,25 @@ exports = module.exports = [
         }
     },
     {
-        active: false,
+        active: true,
         origin: 'site',
         name: 'IGN Norge',
         url: 'http://no.ign.com',
         linkref: 'url',
-        tags: ['gaming', 'technology'],
+        category: ['technology', 'gaming'],
         format: 'desktop',
         body: true,
         template: {
             containers: [
                 {
-                    selector: '.blogroll',
+                    selector: 'li article',
                     elements: [
                         {
                             name: 'guid',
                             type: 'url',
                             items: [
                                 {
-                                    selector: 'li article h3 a',
+                                    selector: 'h3 a',
                                     attribute: 'href'
                                 }
                             ]
@@ -100,7 +168,7 @@ exports = module.exports = [
                             type: 'url',
                             items: [
                                 {
-                                    selector: 'li article h3 a',
+                                    selector: 'h3 a',
                                     attribute: 'href'
                                 }
                             ]
@@ -110,7 +178,7 @@ exports = module.exports = [
                             required: true,
                             items: [
                                 {
-                                    selector: 'li article h3 a'
+                                    selector: 'h3 a'
                                 }
                             ]
                         },
@@ -136,7 +204,7 @@ exports = module.exports = [
         name: 'Pressfire.no',
         url: 'http://www.pressfire.no/',
         linkref: 'url',
-        tags: ['gaming', 'technology'],
+        category: ['technology', 'gaming'],
         format: 'desktop',
         body: true,
         template: {
@@ -286,78 +354,10 @@ exports = module.exports = [
     {
         active: false,
         origin: 'site',
-        name: 'Spillfreak.no',
-        url: 'http://www.spillfreak.no',
-        linkref: 'url',
-        tags: ['gaming', 'technology'],
-        format: 'desktop',
-        body: false,
-        template: {
-            containers: [
-                {
-                    selector: 'div.blog-item',
-                    elements: [
-                        {
-                            name: 'guid',
-                            type: 'url',
-                            items: [
-                                {
-                                    selector: 'div.archive-text h2 a',
-                                    attribute: 'href'
-                                }
-                            ]
-                        },
-                        {
-                            name: 'url',
-                            type: 'url',
-                            items: [
-                                {
-                                    selector: 'div.archive-text h2 a',
-                                    attribute: 'href'
-                                }
-                            ]
-                        },
-                        {
-                            name: 'title',
-                            required: true,
-                            items: [
-                                {
-                                    selector: 'div.archive-text h2 a'
-                                }
-                            ]
-                        },
-                        {
-                            name: 'description',
-                            items: [
-                                {
-                                    selector: 'div.archive-text p',
-                                    delimiter: ' ... Read More'
-                                }
-                            ]
-                        },
-                        {
-                            name: 'image',
-                            type: 'url',
-                            fallback: 'http://someimageurl.comm/1.png',
-                            items: [
-                                {
-                                    selector: 'div.item-image a img',
-                                    attribute: 'src'
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    },
-    {
-        active: false,
-        origin: 'site',
         name: 'Tv2 Nettavisen',
         url: 'http://www.nettavisen.no/',
         linkref: 'url',
-        tags: ['nyheter', 'innenriks'],
+        category: ['news'],
         format: 'desktop',
         body: false,
         template: {
@@ -471,7 +471,7 @@ exports = module.exports = [
         name: 'sol.no',
         url: 'http://www.sol.no/',
         linkref: 'url',
-        tags: ['nyheter', 'innenriks'],
+        category: ['news'],
         format: 'desktop',
         body: false,
         template: {
@@ -576,6 +576,113 @@ exports = module.exports = [
                                 },
                                 {
                                     selector: 'span.df-img-container-inner a img',
+                                    attribute: 'src'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        active: true,
+        origin: 'site',
+        name: 'Aftenposten Forside',
+        url: 'http://www.aftenposten.no/',
+        linkref: 'url',
+        category: ['news'],
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: '.df-article-content',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h4 a',
+                                    attribute: 'href'
+                                },{
+                                    selector: 'h3 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h1 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'url',
+                            type: 'url',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h4 a',
+                                    attribute: 'href'
+                                },{
+                                    selector: 'h3 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h1 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a'
+                                },
+                                {
+                                    selector: 'h4 a'
+                                },
+                                {
+                                    selector: 'h3 a'
+                                },
+                                {
+                                    selector: 'h2 a'
+                                },
+                                {
+                                    selector: 'h1 a'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: null,
+                            items: [
+                                {
+                                    selector: '.df-img-container-inner a img',
+                                    attribute: 'data-src'
+                                },
+                                {
+                                    selector: '.df-img-container-inner a img',
                                     attribute: 'src'
                                 }
                             ]

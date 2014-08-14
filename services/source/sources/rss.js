@@ -5,7 +5,7 @@ exports = module.exports = [
         name: 'gamereactor 20 siste nyheter',
         url: 'http://www.gamereactor.no/rss/rss.php?texttype=4',
         linkref: 'url',
-        tags: ['technology', 'games'],
+        category: ['technology', 'games'],
         format: 'desktop',
         body: false,
         template: {
@@ -61,7 +61,7 @@ exports = module.exports = [
         name: 'spill.no',
         url: 'http://www.spill.no/feed.aspx?list=news',
         linkref: 'url',
-        tags: ['technology', 'games'],
+        category: ['technology', 'games'],
         format: 'desktop',
         body: false,
         template: {
@@ -113,7 +113,7 @@ exports = module.exports = [
         name: 'gamer.no',
         url: 'http://www.gamer.no/feeds/general.xml',
         linkref: 'url',
-        tags: ['technology', 'games'],
+        category: ['technology', 'games'],
         format: 'desktop',
         body: false,
         template: {
@@ -175,7 +175,7 @@ exports = module.exports = [
         name: 'hackernews',
         url: 'https://news.ycombinator.com/rss',
         linkref: 'url',
-        tags: ['technology', 'games'],
+        category: ['technology', 'hackernews'],
         format: 'desktop',
         body: true,
         template: {
