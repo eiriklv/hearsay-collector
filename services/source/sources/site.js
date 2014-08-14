@@ -79,18 +79,18 @@ exports = module.exports = [
         linkref: 'url',
         tags: ['gaming', 'technology'],
         format: 'desktop',
-        body: false,
+        body: true,
         template: {
             containers: [
                 {
-                    selector: 'div.headlines',
+                    selector: '.blogroll',
                     elements: [
                         {
                             name: 'guid',
                             type: 'url',
                             items: [
                                 {
-                                    selector: 'h3 a',
+                                    selector: 'li article h3 a',
                                     attribute: 'href'
                                 }
                             ]
@@ -100,7 +100,7 @@ exports = module.exports = [
                             type: 'url',
                             items: [
                                 {
-                                    selector: 'h3 a',
+                                    selector: 'li article h3 a',
                                     attribute: 'href'
                                 }
                             ]
@@ -110,14 +110,14 @@ exports = module.exports = [
                             required: true,
                             items: [
                                 {
-                                    selector: 'h3 a'
+                                    selector: 'li article h3 a'
                                 }
                             ]
                         },
                         {
                             name: 'image',
                             type: 'url',
-                            fallback: 'http://someimageurl.com/image.png',
+                            fallback: 'http://oystatic.ignimgs.com/src/core/img/widgets/global/page/ign-logo-100x100.jpg',
                             items: [
                                 {
                                     selector: 'div.img-thumb a img',
@@ -131,14 +131,14 @@ exports = module.exports = [
         }
     },
     {
-        active: false,
+        active: true,
         origin: 'site',
         name: 'Pressfire.no',
         url: 'http://www.pressfire.no/',
         linkref: 'url',
         tags: ['gaming', 'technology'],
         format: 'desktop',
-        body: false,
+        body: true,
         template: {
             containers: [
                 {
@@ -466,7 +466,7 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'site',
         name: 'sol.no',
         url: 'http://www.sol.no/',

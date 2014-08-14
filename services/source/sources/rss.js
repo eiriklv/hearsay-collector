@@ -170,14 +170,14 @@ exports = module.exports = [
         }
     },
     {
-        active: false,
+        active: true,
         origin: 'feed',
         name: 'hackernews',
         url: 'https://news.ycombinator.com/rss',
         linkref: 'url',
         tags: ['technology', 'games'],
         format: 'desktop',
-        body: false,
+        body: true,
         template: {
             elements: [
                 {
@@ -224,7 +224,7 @@ exports = module.exports = [
                             selector: 'enclosures[0].url'
                         }
                     ],
-                    fallback: 'https://news.ycombinator.com/y18.gif'
+                    fallback: 'http://www.ycombinator.com/images/ycombinator-logo-fb889e2e.png'
                 }
             ]
         }
