@@ -1,7 +1,7 @@
 var async = require('async');
 var http = require('http');
 
-exports = module.exports = function (scraper, rssReader, config) {
+exports = module.exports = function (scraper, rssReader, jsonFetcher, config) {
     async.series({
         startHttpServer: function (callback) {
             if('heroku' == config.get('env')){
@@ -22,6 +22,11 @@ exports = module.exports = function (scraper, rssReader, config) {
                 },
                 runRssFeedParser: function (callback) {
                     async.forever(rssReader.run.bind(rssReader), function (err) {
+                        callback(err);
+                    });
+                },
+                runJsonFetcherAndMapper: function (callback) {
+                    async.forever(jsonFetcher.run.bind(jsonFetcher), function (err) {
                         callback(err);
                     });
                 }

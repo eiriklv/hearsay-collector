@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var debug = require('debug')('hearsay:collector:app');
 var SiteScraper = require('congregator-sitescraper');
 var RssReader = require('congregator-rssreader');
+var JsonFetcher = require('congregator-jsonfetcher');
 
 // create connection to db
 setup.db(mongoose, config);
@@ -34,5 +35,14 @@ var rssReader = new RssReader({
     timeout: 5000
 });
 
+// json endpoint fetcher and mapper
+var jsonFetcher = new JsonFetcher({
+    getSources: services.source.getMappings,
+    handleEntry: services.entry.save,
+    sockets: 15,
+    waitTime: 10000,
+    timeout: 5000
+});
+
 // run the process
-require('./modules/run')(siteScraper, rssReader, config);
+require('./modules/run')(siteScraper, rssReader, jsonFetcher, config);
