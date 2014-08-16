@@ -1,6 +1,6 @@
 exports = module.exports = [
     {
-        active: true,
+        active: false,
         origin: 'site',
         name: 'Wired Science',
         url: 'http://www.wired.com/science',
@@ -68,7 +68,7 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'site',
         name: 'Gamer.no',
         url: 'http://www.gamer.no',
@@ -140,7 +140,7 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'site',
         name: 'IGN Norge',
         url: 'http://no.ign.com',
@@ -199,7 +199,7 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'site',
         name: 'Pressfire.no',
         url: 'http://www.pressfire.no/',
@@ -586,7 +586,7 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'site',
         name: 'Aftenposten Forside',
         url: 'http://www.aftenposten.no/',

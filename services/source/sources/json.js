@@ -1,6 +1,6 @@
 exports = module.exports = [
     {
-        "active": true,
+        "active": false,
         "origin": "json",
         "name": "Mashable",
         "url": "http://mashable.com/stories.json?hot_per_page=0&new_per_page=30&rising_per_page=0",
