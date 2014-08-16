@@ -94,7 +94,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -116,7 +117,7 @@ exports = module.exports = [
                             selector: 'enclosures[0].url'
                         }
                     ],
-                    fallback: 'https://news.ycombinator.com/y18.gif'
+                    fallback: 'http://www.ycombinator.com/images/ycombinator-logo-fb889e2e.png'
                 }
             ]
         }
@@ -154,7 +155,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -214,7 +216,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -247,6 +250,7 @@ exports = module.exports = [
         name: 'Pressfire.no',
         url: 'http://www.pressfire.no/rss/nyheter',
         linkref: 'url',
+        charsetOverride: 'utf-8',
         category: ['technology', 'gaming'],
         format: 'desktop',
         body: true,
@@ -274,7 +278,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -334,7 +339,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -394,7 +400,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -427,7 +434,7 @@ exports = module.exports = [
         name: 'Wired.com',
         url: 'http://feeds.wired.com/wired/index',
         linkref: 'url',
-        category: ['career', 'wired'],
+        category: ['technology', 'wired'],
         format: 'desktop',
         body: true,
         template: {
@@ -454,7 +461,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -482,7 +490,7 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'feed',
         name: 'Morgenbladet',
         url: 'http://morgenbladet.no/feed',
@@ -514,7 +522,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -542,7 +551,7 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'feed',
         name: 'Aftenposten - Digital',
         url: 'http://www.aftenposten.no/rss/?kat=forbruker_digital',
@@ -574,7 +583,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
@@ -633,7 +643,8 @@ exports = module.exports = [
                     required: true,
                     items: [
                         {
-                            selector: 'title'
+                            selector: 'title',
+                            decode: true
                         }
                     ]
                 },
