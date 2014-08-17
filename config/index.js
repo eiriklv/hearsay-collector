@@ -14,7 +14,7 @@ var debug = require('debug')('hearsay:collector:configuration');
 var config = module.exports = convict({
     env: {
         doc: 'The application environment.',
-        format: ['production', 'development'],
+        format: ['production', 'development', 'heroku'],
         default: 'development',
         env: 'NODE_ENV'
     },
