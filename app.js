@@ -22,8 +22,8 @@ var siteScraper = new SiteScraper({
     getSources: services.source.getSites,
     handleEntry: services.entry.save,
     sockets: 15,
-    waitTime: 10000,
-    timeout: 5000
+    waitTime: 25000,
+    timeout: 10000
 });
 
 // rss feed reader/parser
@@ -31,8 +31,8 @@ var rssReader = new RssReader({
     getSources: services.source.getFeeds,
     handleEntry: services.entry.save,
     sockets: 15,
-    waitTime: 10000,
-    timeout: 5000
+    waitTime: 25000,
+    timeout: 10000
 });
 
 // json endpoint fetcher and mapper
@@ -40,8 +40,8 @@ var jsonFetcher = new JsonFetcher({
     getSources: services.source.getMappings,
     handleEntry: services.entry.save,
     sockets: 15,
-    waitTime: 10000,
-    timeout: 5000
+    waitTime: 25000,
+    timeout: 10000
 });
 
 // run the process
