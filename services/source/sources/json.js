@@ -1,10 +1,10 @@
 exports = module.exports = [
     {
-        "active": false,
+        "active": true,
         "origin": "json",
-        "name": "Mashable",
-        "url": "http://mashable.com/stories.json?hot_per_page=0&new_per_page=30&rising_per_page=0",
-        "listref": "new",
+        "name": "Mashable (must-reads)",
+        "url": "http://mashable.com/category/must-reads/?format=json",
+        "listref": "data",
         "linkref": "url",
         "category": ['technology', 'mashable'],
         "format": "desktop",
