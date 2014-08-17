@@ -298,7 +298,8 @@ exports = module.exports = [
                         {
                             selector: 'enclosures[0].url'
                         }
-                    ]
+                    ],
+                    fallback: 'http://images.inc.com/topnav/inc-logo.png'
                 }
             ]
         }
@@ -358,7 +359,8 @@ exports = module.exports = [
                         {
                             selector: 'enclosures[0].url'
                         }
-                    ]
+                    ],
+                    fallback: 'http://cdn.arstechnica.net/wp-content/themes/arstechnica/assets/images/logo.png'
                 }
             ]
         }
@@ -418,7 +420,8 @@ exports = module.exports = [
                         {
                             selector: 'enclosures[0].url'
                         }
-                    ]
+                    ],
+                    fallback: 'http://www.entrepreneur.com/assets/img/ent-logo-high.png'
                 }
             ]
         }
@@ -478,7 +481,8 @@ exports = module.exports = [
                         {
                             selector: 'enclosures[0].url'
                         }
-                    ]
+                    ],
+                    fallback: 'http://blog.codinghorror.com/assets/images/codinghorror-app-icon.png?v=0d085690dd'
                 }
             ]
         }
@@ -598,7 +602,8 @@ exports = module.exports = [
                         {
                             selector: 'enclosures[0].url'
                         }
-                    ]
+                    ],
+                    fallback: 'http://s0.wp.com/wp-content/themes/vip/techcrunch-2013/assets/images/logo.svg'
                 }
             ]
         }
