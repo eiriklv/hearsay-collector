@@ -607,5 +607,66 @@ exports = module.exports = [
                 }
             ]
         }
+    },
+    {
+        active: true,
+        origin: 'feed',
+        name: 'Smashing Magazine',
+        url: 'http://www.smashingmagazine.com/feed/',
+        linkref: 'url',
+        category: ['blogs', 'smashingmagazine'],
+        format: 'desktop',
+        body: true,
+        template: {
+            elements: [
+                {
+                    name: 'guid',
+                    type: 'url',
+                    required: true,
+                    items: [
+                        {
+                            selector: 'guid'
+                        },
+                        {
+                            selector: 'link'
+                        },
+                        {
+                            selector: 'title',
+                            decode: true
+                        }
+                    ]
+                },
+                {
+                    name: 'title',
+                    required: true,
+                    items: [
+                        {
+                            selector: 'title',
+                            decode: true
+                        }
+                    ]
+                },
+                {
+                    name: 'url',
+                    type: 'url',
+                    required: true,
+                    items: [
+                        {
+                            selector: 'link'
+                        }
+                    ]
+                },
+                {
+                    name: 'image',
+                    type: 'url',
+                    items: [
+                        {
+                            selector: 'enclosures[0].url'
+                        }
+                    ],
+                    fallback: 'http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/logo.png'
+                }
+            ]
+        }
     }
 ];
