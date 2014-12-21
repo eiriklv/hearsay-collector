@@ -668,5 +668,65 @@ exports = module.exports = [
                 }
             ]
         }
+    }, {
+        active: true,
+        origin: 'feed',
+        name: 'KQED MindShift',
+        url: 'http://feeds.feedburner.com/kqed/nHAK?format=xml',
+        linkref: 'url',
+        category: ['career', 'mindshift'],
+        format: 'desktop',
+        body: true,
+        template: {
+            elements: [
+                {
+                    name: 'guid',
+                    type: 'url',
+                    required: true,
+                    items: [
+                        {
+                            selector: 'guid'
+                        },
+                        {
+                            selector: 'link'
+                        },
+                        {
+                            selector: 'title',
+                            decode: true
+                        }
+                    ]
+                },
+                {
+                    name: 'title',
+                    required: true,
+                    items: [
+                        {
+                            selector: 'title',
+                            decode: true
+                        }
+                    ]
+                },
+                {
+                    name: 'url',
+                    type: 'url',
+                    required: true,
+                    items: [
+                        {
+                            selector: 'link'
+                        }
+                    ]
+                },
+                {
+                    name: 'image',
+                    type: 'url',
+                    items: [
+                        {
+                            selector: 'enclosures[0].url'
+                        }
+                    ],
+                    fallback: 'http://blogs.kqed.org/mindshift/wp-content/themes/MS-clear/img/logo-mindshift.png'
+                }
+            ]
+        }
     }
 ];
