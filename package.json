@@ -19,7 +19,7 @@
     "debug": "2.0.x",
     "congregator-sitescraper": "eiriklv/congregator-sitescraper",
     "congregator-rssreader": "eiriklv/congregator-rssreader",
-    "congregator-jsonfetcher": "github.com/eiriklv/congregator-jsonfetcher",
+    "congregator-jsonfetcher": "eiriklv/congregator-jsonfetcher",
     "hearsay-common": "eiriklv/hearsay-common"
   },
   "scripts": {
