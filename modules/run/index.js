@@ -16,30 +16,21 @@ exports = module.exports = function (scraper, rssReader, jsonFetcher, config) {
         collectAndDistributeContent: function (callback) {
             async.parallel({
                 runSiteScraper: function (callback) {
-                    async.forever(scraper.run.bind(scraper), function (err) {
-                        callback(err);
-                    });
+                    async.forever(scraper.run.bind(scraper), callback);
                 },
                 runRssFeedParser: function (callback) {
-                    async.forever(rssReader.run.bind(rssReader), function (err) {
-                        callback(err);
-                    });
+                    async.forever(rssReader.run.bind(rssReader), callback);
                 },
                 runJsonFetcherAndMapper: function (callback) {
-                    async.forever(jsonFetcher.run.bind(jsonFetcher), function (err) {
-                        callback(err);
-                    });
+                    async.forever(jsonFetcher.run.bind(jsonFetcher), callback);
                 }
-            }, function (err, result) {
-                callback(err);
-            });
+            }, callback);
         }
     }, function (err, results) {
         if (err) {
             debug(util.inspect(err), 'error');
             process.exit(1);
-        }
-        else {
+        } else {
             console.log('??? - this should never happen');
         }
     });

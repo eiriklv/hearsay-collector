@@ -11,7 +11,7 @@
     "node": "0.10.32"
   },
   "dependencies": {
-    "mongoose": "3.8.16",
+    "mongoose": "4.1.x",
     "request": "2.40.x",
     "async": "0.9.x",
     "colors": "0.6.x",
